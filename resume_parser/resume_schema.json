@@ -1,0 +1,31 @@
+{
+    "personal_details": {
+        "first_name": "string",
+        "last_name": "string",
+        "job_title": "string",
+        "address": "string",
+        "email": "string",
+        "date_of_birth": "string",
+        "phone": "string"
+    },
+    "professional_summary": "string",
+    "employment_history": [
+        {
+            "job_title": "string",
+            "employer": "string",
+            "start_date": "string", 
+            "end_date": "string",
+            "description": "string"
+        }
+    ],
+    "education": [
+        {
+            "school": "string",
+            "degree": "string",
+            "start_date": "string", 
+            "end_date": "string",
+            "description": "string"
+        }
+    ],
+    "skills": ["string"]
+}

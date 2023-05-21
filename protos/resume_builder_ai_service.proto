@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package resume.parser;
+
+
+service ResumeAIService {
+    rpc ParseResume(ParseResumeRequest) returns (ParseResumeResponse) {}
+    rpc SuggestionSummary(SuggestionSummaryRequest) returns (SuggestionSummaryResponse) {}
+}
+
+
+message ParseResumeRequest {
+  string filename = 1;
+  string filetype = 2;
+  string parsetype = 3;
+  string base64data = 4;
+}
+
+message ParseResumeResponse {
+  string result = 1;
+}
+
+message SuggestionSummaryRequest {
+  string input = 1;
+}
+
+message SuggestionSummaryResponse {
+  string output = 1;
+}

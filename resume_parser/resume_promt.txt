@@ -1,0 +1,4 @@
+Parse the following resume and extract the following information: personal details,  professional summary, employment history, education, skills. And convert into JSON format with schema: 
+{0} 
+
+{1}
