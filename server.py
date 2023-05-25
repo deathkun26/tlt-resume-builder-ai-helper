@@ -54,9 +54,18 @@ class ResumeAIServiceServicer(resume_builder_ai_service_pb2_grpc.ResumeAIService
 
         result = self.bart_resume_parser.parse(raw_text)
 
-        os.remove(filepath)
-        split = filepath.split('.')
-        os.remove(''.join(split[:-1]) + '_scaled' + "." + split[-1])     
+        try:
+            if filetype == "pdf":
+                os.remove(filepath)
+                split = filepath.split('.')
+                os.remove(''.join(split[:-1]) + "." + "png")  
+                os.remove(''.join(split[:-1]) + '_scaled' + "." + "png")  
+            else: 
+                os.remove(filepath)
+                split = filepath.split('.')
+                os.remove(''.join(split[:-1]) + '_scaled' + "." + split[-1])     
+        except:
+            print("Remove file error: " + filepath)
         return resume_builder_ai_service_pb2.ParseResumeResponse(result=json.dumps(result))
 
 

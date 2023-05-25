@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl gnupg loca
   apt -y install make cmake gcc g++ && \
   apt -y install libsndfile1-dev && \ 
   apt-get -y install libgl1 && \ 
+  apt-get -y install poppler-utils && \
   apt install -y tesseract-ocr && \
   pip install --upgrade pip && \
   locale-gen en_US.UTF-8  && \
